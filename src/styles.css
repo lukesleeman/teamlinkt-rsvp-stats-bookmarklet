@@ -14,6 +14,10 @@
 .tlrsvp-table th{position:sticky;top:0;background:#fff;cursor:pointer}
 .tlrsvp-table tbody tr:hover{background:#f3f6ff}
 .tlrsvp-chart{max-width:800px}
+/* !important: host pages can carry page-wide svg rules (TeamLinkt's Home page has svg{fill:#fff}) */
+.tlrsvp-chart svg,.tlrsvp-chart text{fill:#666!important}
+.tlrsvp-chart path{fill:none!important;stroke:#2563eb!important;stroke-width:2px!important}
+.tlrsvp-chart circle{fill:#2563eb!important}
 .tlrsvp-progress{width:100%}
 .tlrsvp-copybuf{position:fixed;top:0;left:0;opacity:0}
 .tlrsvp-header input{height:32px;box-sizing:border-box;padding:0 10px;margin:0;border:1px solid #ccc;border-radius:4px;font:inherit;vertical-align:middle}
