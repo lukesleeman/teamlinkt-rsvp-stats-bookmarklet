@@ -16,13 +16,13 @@ const pad = n => String(n).padStart(2, '0');
 const cell = html => new DOMParser().parseFromString(String(html || ''), 'text/html').body;
 const text = html => cell(html).textContent.replace(/\s+/g, ' ').trim();
 
-// 'Tue October 27 2026, 6:00 pm' -> '2026-10-27T18:00'
+// 'Tue October 27 2026, 6:00 pm' -> '2026-10-27T18:00'. Events with a 'TBD' time start at midnight.
 export function parseEventDate(value) {
-  const m = value.match(/([a-z]+) (\d{1,2}) (\d{4}), (\d{1,2}):(\d{2}) ([ap]m)/i);
+  const m = value.match(/([a-z]+) (\d{1,2}) (\d{4}), (?:(\d{1,2}):(\d{2}) ([ap]m)|TBD)/i);
   const month = m && MONTHS.indexOf(m[1].toLowerCase());
   if (!m || month < 0) throw new TeamLinktError('parse', 'getEvents', `Unrecognised event date: ${value}`);
-  const hours = (Number(m[4]) % 12) + (m[6].toLowerCase() === 'pm' ? 12 : 0);
-  return `${m[3]}-${pad(month + 1)}-${pad(m[2])}T${pad(hours)}:${m[5]}`;
+  const hours = m[4] ? (Number(m[4]) % 12) + (m[6].toLowerCase() === 'pm' ? 12 : 0) : 0;
+  return `${m[3]}-${pad(month + 1)}-${pad(m[2])}T${pad(hours)}:${m[5] || '00'}`;
 }
 
 export function parseEventRow(row) {

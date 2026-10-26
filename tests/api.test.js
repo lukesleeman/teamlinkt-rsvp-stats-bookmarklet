@@ -17,6 +17,10 @@ describe('cell parsing', () => {
     expect(parseEventRow(midnightRow).start).toBe('2026-10-31T00:30');
   });
 
+  test('an event with a TBD time starts at midnight', () => {
+    expect(parseEventDate('Sun January 29 2023, TBD')).toBe('2023-01-29T00:00');
+  });
+
   test('rejects unparseable dates', () => {
     expect(() => parseEventDate('garbage')).toThrow(expect.objectContaining({ kind: 'parse', endpoint: 'getEvents' }));
   });
