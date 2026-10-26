@@ -14,7 +14,7 @@ const ROWS = [{ id: '101', name: 'Alex Smith', status: 'G' }, { id: '102', name:
 
 function fakeApi(events = EVENTS, availability = () => Promise.resolve(ROWS)) {
   return {
-    fetchPastEvents: jest.fn().mockResolvedValue(events),
+    fetchPastEvents: jest.fn().mockResolvedValue({ events, skipped: 0 }),
     fetchAvailability: jest.fn((teamId, eventId) => availability(eventId)),
   };
 }
@@ -34,7 +34,7 @@ describe('syncTeam', () => {
     expect(result.events.map(e => e.id).sort()).toEqual(['e1', 'e5']);
     expect(result.data.rsvps.e1).toEqual({ start: '2026-10-20T18:00', statuses: { 101: 'G', 102: 'R' } });
     expect(result.data.members).toEqual({ 101: 'Alex Smith', 102: 'Sam Lee' });
-    expect(result).toMatchObject({ failed: 0, saveFailed: false });
+    expect(result).toMatchObject({ failed: 0, saveFailed: false, unreadable: {} });
   });
 
   test('second run reuses the cache', async () => {
@@ -61,6 +61,23 @@ describe('syncTeam', () => {
     expect(result.failed).toBe(1);
     expect(result.data.rsvps.e5).toBeUndefined();
     expect(result.data.rsvps.e1).toBeDefined();
+  });
+
+  test('an unreadable RSVP response skips that event without retrying', async () => {
+    const api = fakeApi(EVENTS, id =>
+      id === 'e5' ? Promise.reject(new TeamLinktError('parse', 'getEventAvailability')) : Promise.resolve(ROWS));
+    const result = await sync(api);
+    expect(api.fetchAvailability.mock.calls.filter(c => c[1] === 'e5')).toHaveLength(1);
+    expect(result).toMatchObject({ failed: 0, unreadable: { getEventAvailability: 1 } });
+    expect(result.data.rsvps.e5).toBeUndefined();
+    expect(result.data.rsvps.e1).toBeDefined();
+  });
+
+  test('reports event rows the event list could not read', async () => {
+    const api = fakeApi();
+    api.fetchPastEvents.mockResolvedValue({ events: EVENTS, skipped: 3 });
+    const result = await sync(api);
+    expect(result.unreadable).toEqual({ getEvents: 3 });
   });
 
   test('session error aborts the sync', async () => {

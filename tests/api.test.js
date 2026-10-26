@@ -33,6 +33,11 @@ describe('cell parsing', () => {
     expect(rows[1].name).toBe('Sam Lee');
   });
 
+  test('a dropdown with no selected option reads as its first option', () => {
+    const row = { ...availabilityRows[2], 3: availabilityRows[2][3].replace(' selected', '') };
+    expect(parseAvailabilityRows([row])[0].status).toBe('R');
+  });
+
   test('unknown status class is a parse error', () => {
     expect(() => parseAvailabilityRows([weirdStatusRow]))
       .toThrow(expect.objectContaining({ kind: 'parse', endpoint: 'getEventAvailability' }));
@@ -44,9 +49,10 @@ describe('fetching', () => {
 
   test('fetchPastEvents posts the past-events query and parses rows', async () => {
     global.fetch = respond(JSON.stringify({ data: [eventRow] }));
-    const events = await fetchPastEvents('52263');
+    const { events, skipped } = await fetchPastEvents('52263');
     expect(events).toHaveLength(1);
     expect(events[0].id).toBe('13930893');
+    expect(skipped).toBe(0);
 
     const [url, init] = global.fetch.mock.calls[0];
     expect(url).toBe('/schedules/getEvents');
@@ -57,6 +63,15 @@ describe('fetching', () => {
     expect(init.body.get('team_id')).toBe('52263');
     expect(init.body.get('status')).toBe('past');
     expect(init.body.get('length')).toBe('2000');
+  });
+
+  test('fetchPastEvents skips rows it cannot read instead of failing', async () => {
+    const allDay = { ...eventRow, 0: '<a href="#">Sat June 5 2021, All Day</a>' };
+    const noLink = { ...eventRow, 6: '' };
+    global.fetch = respond(JSON.stringify({ data: [eventRow, allDay, noLink] }));
+    const { events, skipped } = await fetchPastEvents('52263');
+    expect(events.map(e => e.id)).toEqual(['13930893']);
+    expect(skipped).toBe(2);
   });
 
   test('fetchAvailability posts the event id', async () => {

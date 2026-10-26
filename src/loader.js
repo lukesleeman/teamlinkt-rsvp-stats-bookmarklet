@@ -26,12 +26,16 @@ export async function syncTeam(teamId, {
   const nowMinute = isoMinute(now);
   const earliest = addMonths(today, -12);
 
-  const events = (await api.fetchPastEvents(teamId)).filter(e =>
+  const list = await api.fetchPastEvents(teamId);
+  const events = list.events.filter(e =>
     !isCancelled(e.name) && e.start < nowMinute && e.start.slice(0, 10) >= earliest);
   const todo = events.filter(e => !data.rsvps[e.id]);
 
   let saveFailed = false;
   let failed = 0;
+  // Rows TeamLinkt sent that we couldn't read, by endpoint. Those events are skipped, not cached.
+  const unreadable = {};
+  if (list.skipped) unreadable.getEvents = list.skipped;
   let done = 0;
   let next = 0;
   let aborted = null;
@@ -50,8 +54,9 @@ export async function syncTeam(teamId, {
         data.rsvps[event.id] = { start: event.start, statuses };
         persist();
       } catch (e) {
-        if (e.kind !== 'network') { aborted = e; return; }
-        failed++;
+        if (e.kind === 'parse') unreadable[e.endpoint] = (unreadable[e.endpoint] || 0) + 1;
+        else if (e.kind === 'network') failed++;
+        else { aborted = e; return; }
       }
       onProgress(++done, todo.length);
     }
@@ -62,5 +67,5 @@ export async function syncTeam(teamId, {
 
   prune(data, addMonths(today, -13));
   persist();
-  return { events, data, failed, saveFailed };
+  return { events, data, failed, saveFailed, unreadable };
 }

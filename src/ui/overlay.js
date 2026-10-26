@@ -9,9 +9,11 @@ import { el } from './dom.js';
 import { renderByEventType } from './byEventType.js';
 import { renderByMember } from './byMember.js';
 
+const unreadableText = endpoint => `Couldn't read RSVPs from TeamLinkt (${endpoint}). The bookmarklet may need updating.`;
+
 function errorText(e) {
   if (e.kind === 'session') return 'Your TeamLinkt session has expired. Log in and try again.';
-  if (e.kind === 'parse') return `Couldn't read RSVPs from TeamLinkt (${e.endpoint}). The bookmarklet may need updating.`;
+  if (e.kind === 'parse') return unreadableText(e.endpoint);
   return e.message;
 }
 
@@ -34,20 +36,27 @@ export function openOverlay({ teamId, teamName, sync = syncTeam, now = new Date(
   const banners = el('div', { className: 'tlrsvp-banners' });
   const banner = text => banners.append(el('div', { className: 'tlrsvp-banner', textContent: text }));
 
-  const presets = [3, 6, 12].map(n => button('tlrsvp-preset', `${n} months`, e => setRange(presetRange(n, today), e.target)));
+  const presets = [3, 6, 12].map(n => button('tlrsvp-preset', `${n} months`, e => setPreset(presetRange(n, today), e.target)));
   const tabs = ['By event type', 'By member'].map((label, i) => button('tlrsvp-tab', label, () => { tab = i; render(); }));
 
   function setRange(next, activePreset) {
     range = next;
-    from.value = range.from;
-    to.value = range.to;
     presets.forEach(p => p.classList.toggle('tlrsvp-active', p === activePreset));
     render();
   }
 
+  function setPreset(next, button) {
+    from.value = next.from;
+    to.value = next.to;
+    setRange(next, button);
+  }
+
+  // Chrome fires change while a date is half typed (year 0002...), so never write back into the
+  // inputs here: swap and clamp only the range that gets applied.
   from.onchange = to.onchange = () => {
     if (!from.value || !to.value) return;
-    const [a, b] = [from.value, to.value].sort();
+    const clamp = d => (d < from.min ? from.min : d > from.max ? from.max : d);
+    const [a, b] = [from.value, to.value].sort().map(clamp);
     setRange({ from: a, to: b });
   };
 
@@ -84,6 +93,7 @@ export function openOverlay({ teamId, teamName, sync = syncTeam, now = new Date(
       groups = groupEvents(r.events).groups;
       if (r.failed) banner(`${r.failed} events couldn't be loaded and will be retried next time.`);
       if (r.saveFailed) banner("Couldn't save data, so the next run will be slow.");
+      Object.keys(r.unreadable || {}).forEach(endpoint => banner(unreadableText(endpoint)));
       render();
     }, e => {
       if (run !== runs) return;
@@ -106,7 +116,7 @@ export function openOverlay({ teamId, teamName, sync = syncTeam, now = new Date(
   overlay.onclick = e => { if (e.target === overlay) overlay.remove(); };
 
   document.body.append(overlay);
-  setRange(range, presets[2]);
+  setPreset(range, presets[2]);
   start();
   return overlay;
 }

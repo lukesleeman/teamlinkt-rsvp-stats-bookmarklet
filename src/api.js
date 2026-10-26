@@ -33,8 +33,9 @@ export function parseEventRow(row) {
 
 function parseStatus(html) {
   const el = cell(html);
-  const selected = el.querySelector('select option[selected]');
-  if (selected) return STATUS_VALUES[selected.value];
+  // A dropdown with no 'selected' option shows its first option, as the browser would.
+  const select = el.querySelector('select');
+  if (select) return STATUS_VALUES[select.value];
   const label = el.querySelector('.status_label');
   const cls = label && [...label.classList].find(c => c.startsWith('status_label_'));
   return cls && STATUS_CLASSES[cls.slice('status_label_'.length)];
@@ -72,11 +73,21 @@ async function postForm(url, endpoint, data) {
   return body.data;
 }
 
+// Returns { events, skipped }. A row that can't be read (an odd date format, say) is skipped and
+// counted rather than failing the whole list, which reaches back years.
 export async function fetchPastEvents(teamId) {
   const rows = await postForm('/schedules/getEvents', 'getEvents', {
     team_id: teamId, status: 'past', draw: 1, start: 0, length: 2000, 'order[0][column]': 0, 'order[0][dir]': 'desc',
   });
-  return rows.map(parseEventRow);
+  const events = [];
+  rows.forEach(row => {
+    try {
+      events.push(parseEventRow(row));
+    } catch (e) {
+      if (e.kind !== 'parse') throw e;
+    }
+  });
+  return { events, skipped: rows.length - events.length };
 }
 
 export async function fetchAvailability(teamId, eventId) {

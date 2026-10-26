@@ -154,6 +154,38 @@ describe('overlay', () => {
     ]);
   });
 
+  test('unreadable rows show a banner alongside the stats', async () => {
+    const sync = deferredSync();
+    openOverlay({ teamId: '52263', teamName: 'Sea Dragons', sync, now });
+    sync.resolve({ events: EVENTS, data: DATA, failed: 0, saveFailed: false, unreadable: { getEventAvailability: 2 } });
+    await flush();
+    expect($$('.tlrsvp-banner').map(b => b.textContent)).toEqual([
+      "Couldn't read RSVPs from TeamLinkt (getEventAvailability). The bookmarklet may need updating.",
+    ]);
+    expect($$('button.tlrsvp-group')).toHaveLength(2);
+  });
+
+  test('typing a date does not rewrite the inputs, and the range stays within 12 months', async () => {
+    await openLoaded();
+    // Chrome fires change while a year is half typed, e.g. To = 0002-10-26.
+    $('.tlrsvp-to').value = '0002-10-26';
+    $('.tlrsvp-to').dispatchEvent(new Event('change'));
+    expect($('.tlrsvp-from').value).toBe('2025-10-26');
+    expect($('.tlrsvp-to').value).toBe('0002-10-26');
+
+    $('.tlrsvp-from').value = '2020-01-01';
+    $('.tlrsvp-to').value = '2026-10-26';
+    $('.tlrsvp-to').dispatchEvent(new Event('change'));
+    click($('.tlrsvp-export'));
+    expect(downloadFile.mock.calls[0][0]).toBe('Sea Dragons RSVPs 2025-10-26 to 2026-10-26.csv');
+
+    $('.tlrsvp-from').value = '2026-10-20';
+    $('.tlrsvp-to').value = '2026-10-01';
+    $('.tlrsvp-to').dispatchEvent(new Event('change'));
+    click($('.tlrsvp-export'));
+    expect(downloadFile.mock.calls[1][0]).toBe('Sea Dragons RSVPs 2026-10-01 to 2026-10-20.csv');
+  });
+
   test('clicking the bookmarklet again replaces the overlay', () => {
     openOverlay({ teamId: '52263', teamName: 'Sea Dragons', sync: deferredSync(), now });
     openOverlay({ teamId: '52263', teamName: 'Sea Dragons', sync: deferredSync(), now });
