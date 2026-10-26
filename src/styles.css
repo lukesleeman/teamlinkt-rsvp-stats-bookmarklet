@@ -1,1 +1,18 @@
-.tlrsvp-overlay {}
+.tlrsvp-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:10000;display:flex;align-items:center;justify-content:center;font:14px system-ui,sans-serif;color:#222}
+.tlrsvp-modal{background:#fff;border-radius:8px;width:90vw;height:90vh;display:flex;flex-direction:column;padding:12px 16px;box-sizing:border-box}
+.tlrsvp-header,.tlrsvp-tabs{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:8px}
+.tlrsvp-header h2{font-size:18px;margin:0 auto 0 0}
+.tlrsvp-modal button{border:1px solid #ccc;background:#f6f6f6;border-radius:4px;padding:4px 10px;cursor:pointer;font:inherit}
+.tlrsvp-modal button.tlrsvp-active{background:#2563eb;border-color:#2563eb;color:#fff}
+.tlrsvp-banner{background:#fff3cd;border:1px solid #e6c65c;border-radius:4px;padding:6px 10px;margin-bottom:6px}
+.tlrsvp-body{flex:1;overflow:auto}
+.tlrsvp-split{display:grid;grid-template-columns:minmax(200px,25%) 1fr;gap:12px;min-height:100%}
+.tlrsvp-groups{display:flex;flex-direction:column;gap:4px}
+.tlrsvp-modal .tlrsvp-group{text-align:left}
+.tlrsvp-table{border-collapse:collapse;margin-top:8px}
+.tlrsvp-table th,.tlrsvp-table td{padding:3px 8px;border-bottom:1px solid #eee;text-align:left}
+.tlrsvp-table th{position:sticky;top:0;background:#fff;cursor:pointer}
+.tlrsvp-table tbody tr:hover{background:#f3f6ff}
+.tlrsvp-chart{max-width:800px}
+.tlrsvp-progress{width:100%}
+.tlrsvp-copybuf{position:fixed;top:0;left:0;opacity:0}

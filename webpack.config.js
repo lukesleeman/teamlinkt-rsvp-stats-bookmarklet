@@ -40,7 +40,8 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader']
+        // Import CSS as a plain string that index.js injects; style-loader's runtime alone costs ~5 KB encoded.
+        type: 'asset/source'
       }
     ]
   },

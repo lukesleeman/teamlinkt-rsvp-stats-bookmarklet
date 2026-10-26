@@ -7,6 +7,8 @@ function fakeWindow(hostname, teamId) {
 describe('entry point', () => {
   afterEach(() => {
     document.body.innerHTML = '';
+    document.head.innerHTML = '';
+    delete global.fetch;
   });
 
   test('alerts when not on app.teamlinkt.com', () => {
@@ -19,6 +21,18 @@ describe('entry point', () => {
     const win = fakeWindow('app.teamlinkt.com', undefined);
     main(win);
     expect(win.alert).toHaveBeenCalledWith('Open TeamLinkt and pick a team first.');
+  });
+
+  test('injects styles once and opens one overlay, even when run twice', () => {
+    global.fetch = jest.fn(() => new Promise(() => {}));
+    const win = fakeWindow('app.teamlinkt.com', 52263);
+    main(win);
+    main(win);
+    const styles = document.querySelectorAll('style#tlrsvp-style');
+    expect(styles).toHaveLength(1);
+    expect(styles[0].textContent).toContain('.tlrsvp-overlay{');
+    expect(document.querySelectorAll('#tlrsvp-overlay')).toHaveLength(1);
+    expect(win.alert).not.toHaveBeenCalled();
   });
 
   test('getTeamName reads the selected team option', () => {
