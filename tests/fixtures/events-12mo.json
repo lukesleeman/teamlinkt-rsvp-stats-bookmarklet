@@ -1,0 +1,1955 @@
+[
+ {
+  "id": "e1",
+  "start": "2025-10-28T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e2",
+  "start": "2025-10-29T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e3",
+  "start": "2025-11-01T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e4",
+  "start": "2025-11-02T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e5",
+  "start": "2025-11-04T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e6",
+  "start": "2025-11-05T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e7",
+  "start": "2025-11-06T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e8",
+  "start": "2025-11-08T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e9",
+  "start": "2025-11-08T13:00",
+  "name": "Team Lunch With Alex J",
+  "type": "Social Event",
+  "location": "Lim Kopi"
+ },
+ {
+  "id": "e10",
+  "start": "2025-11-09T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e11",
+  "start": "2025-11-11T18:00",
+  "name": "CANCELED Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e12",
+  "start": "2025-11-12T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e13",
+  "start": "2025-11-13T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e14",
+  "start": "2025-11-15T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e15",
+  "start": "2025-11-16T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e16",
+  "start": "2025-11-18T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e17",
+  "start": "2025-11-19T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e18",
+  "start": "2025-11-20T18:00",
+  "name": "CANCELED Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e19",
+  "start": "2025-11-25T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e20",
+  "start": "2025-11-26T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e21",
+  "start": "2025-11-27T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e22",
+  "start": "2025-11-29T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e23",
+  "start": "2025-11-30T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e24",
+  "start": "2025-12-02T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e25",
+  "start": "2025-12-03T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e26",
+  "start": "2025-12-04T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e27",
+  "start": "2025-12-06T09:30",
+  "name": "Dragon Boat Training: Sea-Noirs And Prems Boats",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e28",
+  "start": "2025-12-07T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e29",
+  "start": "2025-12-09T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e30",
+  "start": "2025-12-10T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e31",
+  "start": "2025-12-11T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e32",
+  "start": "2025-12-13T09:30",
+  "name": "Dragon Boat Training: She-Dragons And Mongrels Bo...",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e33",
+  "start": "2025-12-13T13:00",
+  "name": "CYSM HQ Xmas Party",
+  "type": "Social Event",
+  "location": "CYSM HQ"
+ },
+ {
+  "id": "e34",
+  "start": "2025-12-14T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e35",
+  "start": "2025-12-16T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e36",
+  "start": "2025-12-17T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e37",
+  "start": "2025-12-18T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e38",
+  "start": "2025-12-20T09:00",
+  "name": "🎄Christmas Paddle🎄",
+  "type": "Social Event",
+  "location": "Docklands"
+ },
+ {
+  "id": "e39",
+  "start": "2025-12-21T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e40",
+  "start": "2025-12-23T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e41",
+  "start": "2025-12-24T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e42",
+  "start": "2025-12-27T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e43",
+  "start": "2025-12-28T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e44",
+  "start": "2025-12-30T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e45",
+  "start": "2026-01-03T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e46",
+  "start": "2026-01-04T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e47",
+  "start": "2026-01-06T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e48",
+  "start": "2026-01-07T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e49",
+  "start": "2026-01-08T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e50",
+  "start": "2026-01-10T08:30",
+  "name": "Foundation Class",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e51",
+  "start": "2026-01-10T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e52",
+  "start": "2026-01-11T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e53",
+  "start": "2026-01-13T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e54",
+  "start": "2026-01-14T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e55",
+  "start": "2026-01-15T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e56",
+  "start": "2026-01-17T08:30",
+  "name": "Foundation Class",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e57",
+  "start": "2026-01-17T09:00",
+  "name": "Training Camp - Theory",
+  "type": "Other",
+  "location": "Docklands"
+ },
+ {
+  "id": "e58",
+  "start": "2026-01-17T13:00",
+  "name": "Training Camp - Water Session",
+  "type": "Other",
+  "location": "Docklands"
+ },
+ {
+  "id": "e59",
+  "start": "2026-01-18T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e60",
+  "start": "2026-01-20T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e61",
+  "start": "2026-01-21T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e62",
+  "start": "2026-01-22T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e63",
+  "start": "2026-01-24T08:30",
+  "name": "Foundation Class",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e64",
+  "start": "2026-01-24T08:45",
+  "name": "Pilates session with Yalin",
+  "type": "Other",
+  "location": "Docklands"
+ },
+ {
+  "id": "e65",
+  "start": "2026-01-24T09:15",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e66",
+  "start": "2026-01-27T18:00",
+  "name": "CANCELED Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e67",
+  "start": "2026-01-28T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e68",
+  "start": "2026-01-29T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e69",
+  "start": "2026-01-31T08:30",
+  "name": "Foundation Class",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e70",
+  "start": "2026-01-31T08:45",
+  "name": "Pilates session with Yalin",
+  "type": "Other",
+  "location": "Docklands"
+ },
+ {
+  "id": "e71",
+  "start": "2026-01-31T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e72",
+  "start": "2026-02-01T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e73",
+  "start": "2026-02-03T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e74",
+  "start": "2026-02-04T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e75",
+  "start": "2026-02-05T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e76",
+  "start": "2026-02-07T08:30",
+  "name": "CANCELED Foundation Class",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e77",
+  "start": "2026-02-07T08:45",
+  "name": "Pilates session with Yalin",
+  "type": "Other",
+  "location": "Docklands"
+ },
+ {
+  "id": "e78",
+  "start": "2026-02-07T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e79",
+  "start": "2026-02-08T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e80",
+  "start": "2026-02-10T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e81",
+  "start": "2026-02-11T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e82",
+  "start": "2026-02-12T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e83",
+  "start": "2026-02-14T08:30",
+  "name": "CANCELED Foundation Class",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e84",
+  "start": "2026-02-14T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e85",
+  "start": "2026-02-15T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e86",
+  "start": "2026-02-17T18:00",
+  "name": "CANCELED Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e87",
+  "start": "2026-02-18T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e88",
+  "start": "2026-02-19T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e89",
+  "start": "2026-02-21T08:30",
+  "name": "Foundation Class",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e90",
+  "start": "2026-02-21T09:00",
+  "name": "Open day",
+  "type": "Social Event",
+  "location": "Docklands"
+ },
+ {
+  "id": "e91",
+  "start": "2026-02-22T09:00",
+  "name": "LNY HQ Volunteer",
+  "type": "Social Event",
+  "location": "Chinatown Melbourne"
+ },
+ {
+  "id": "e92",
+  "start": "2026-02-22T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e93",
+  "start": "2026-02-24T18:00",
+  "name": "CANCELED Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e94",
+  "start": "2026-02-25T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e95",
+  "start": "2026-02-26T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e96",
+  "start": "2026-02-28T08:30",
+  "name": "Foundation Class",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e97",
+  "start": "2026-02-28T08:45",
+  "name": "Pilates session with Yalin",
+  "type": "Other",
+  "location": "Docklands"
+ },
+ {
+  "id": "e98",
+  "start": "2026-02-28T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e99",
+  "start": "2026-03-01T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e100",
+  "start": "2026-03-03T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e101",
+  "start": "2026-03-04T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e102",
+  "start": "2026-03-05T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e103",
+  "start": "2026-03-07T08:30",
+  "name": "Foundation Class",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e104",
+  "start": "2026-03-07T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e105",
+  "start": "2026-03-08T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e106",
+  "start": "2026-03-09T09:00",
+  "name": "Labour Day-foundation Session",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e107",
+  "start": "2026-03-10T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e108",
+  "start": "2026-03-11T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e109",
+  "start": "2026-03-12T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e110",
+  "start": "2026-03-14T08:30",
+  "name": "Foundation Class",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e111",
+  "start": "2026-03-14T09:00",
+  "name": "Training Camp - Water Session",
+  "type": "Evaluation",
+  "location": "Docklands"
+ },
+ {
+  "id": "e112",
+  "start": "2026-03-14T13:00",
+  "name": "Training Camp - Video Session",
+  "type": "Meeting",
+  "location": "Docklands"
+ },
+ {
+  "id": "e113",
+  "start": "2026-03-15T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e114",
+  "start": "2026-03-17T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e115",
+  "start": "2026-03-18T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e116",
+  "start": "2026-03-19T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e117",
+  "start": "2026-03-24T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e118",
+  "start": "2026-03-25T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e119",
+  "start": "2026-03-26T18:00",
+  "name": "CANCELED Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e120",
+  "start": "2026-03-28T08:45",
+  "name": "Pilates session with Yalin",
+  "type": "Other",
+  "location": "Docklands"
+ },
+ {
+  "id": "e121",
+  "start": "2026-03-28T09:20",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e122",
+  "start": "2026-03-29T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Other",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e123",
+  "start": "2026-03-31T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e124",
+  "start": "2026-04-01T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e125",
+  "start": "2026-04-02T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e126",
+  "start": "2026-04-04T08:30",
+  "name": "Foundation Class",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e127",
+  "start": "2026-04-04T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e128",
+  "start": "2026-04-05T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e129",
+  "start": "2026-04-07T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e130",
+  "start": "2026-04-08T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e131",
+  "start": "2026-04-09T18:00",
+  "name": "CANCELED Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e132",
+  "start": "2026-04-11T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e133",
+  "start": "2026-04-12T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e134",
+  "start": "2026-04-14T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e135",
+  "start": "2026-04-15T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e136",
+  "start": "2026-04-25T09:30",
+  "name": "River Run And Dragon Boat Training",
+  "type": "Social Event",
+  "location": "Docklands"
+ },
+ {
+  "id": "e137",
+  "start": "2026-04-26T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e138",
+  "start": "2026-04-28T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e139",
+  "start": "2026-04-29T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e140",
+  "start": "2026-05-02T09:00",
+  "name": "Open Day",
+  "type": "Social Event",
+  "location": "Docklands"
+ },
+ {
+  "id": "e141",
+  "start": "2026-05-02T11:45",
+  "name": "BBQ 🍗🌭",
+  "type": "Social Event",
+  "location": "Docklands"
+ },
+ {
+  "id": "e142",
+  "start": "2026-05-03T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e143",
+  "start": "2026-05-05T08:45",
+  "name": "Pilates Session With Yalin",
+  "type": "Other",
+  "location": "Docklands"
+ },
+ {
+  "id": "e144",
+  "start": "2026-05-05T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e145",
+  "start": "2026-05-06T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e146",
+  "start": "2026-05-09T08:45",
+  "name": "Pilates Session With Yalin",
+  "type": "Other",
+  "location": "Docklands"
+ },
+ {
+  "id": "e147",
+  "start": "2026-05-09T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e148",
+  "start": "2026-05-10T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e149",
+  "start": "2026-05-12T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e150",
+  "start": "2026-05-13T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e151",
+  "start": "2026-05-16T08:45",
+  "name": "Pilates Session With Yalin",
+  "type": "Other",
+  "location": "Docklands"
+ },
+ {
+  "id": "e152",
+  "start": "2026-05-16T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e153",
+  "start": "2026-05-17T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e154",
+  "start": "2026-05-17T13:00",
+  "name": "🍱🥡Post Regatta Team Lunch",
+  "type": "Social Event",
+  "location": "Hao Phong"
+ },
+ {
+  "id": "e155",
+  "start": "2026-05-19T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e156",
+  "start": "2026-05-20T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e157",
+  "start": "2026-05-23T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e158",
+  "start": "2026-05-24T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e159",
+  "start": "2026-05-26T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e160",
+  "start": "2026-05-27T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e161",
+  "start": "2026-05-30T08:45",
+  "name": "Pilates Session With Yalin",
+  "type": "Other",
+  "location": "Docklands"
+ },
+ {
+  "id": "e162",
+  "start": "2026-05-30T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e163",
+  "start": "2026-05-31T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e164",
+  "start": "2026-06-02T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e165",
+  "start": "2026-06-03T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e166",
+  "start": "2026-06-06T08:30",
+  "name": "Foundation Class",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e167",
+  "start": "2026-06-06T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e168",
+  "start": "2026-06-07T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e169",
+  "start": "2026-06-09T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e170",
+  "start": "2026-06-10T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e171",
+  "start": "2026-06-13T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e172",
+  "start": "2026-06-14T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e173",
+  "start": "2026-06-16T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e174",
+  "start": "2026-06-17T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e175",
+  "start": "2026-06-20T08:30",
+  "name": "Foundation Class",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e176",
+  "start": "2026-06-20T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e177",
+  "start": "2026-06-21T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e178",
+  "start": "2026-06-23T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e179",
+  "start": "2026-06-24T18:00",
+  "name": "Pango Gym - Wednesdays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e180",
+  "start": "2026-06-27T08:30",
+  "name": "Foundation Class",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e181",
+  "start": "2026-06-27T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e182",
+  "start": "2026-06-28T09:00",
+  "name": "Pango Gym - Sundays",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e183",
+  "start": "2026-06-30T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e184",
+  "start": "2026-07-04T08:30",
+  "name": "Foundation Class",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e185",
+  "start": "2026-07-04T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e186",
+  "start": "2026-07-05T09:00",
+  "name": "Pango Gym - Sunday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e187",
+  "start": "2026-07-07T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e188",
+  "start": "2026-07-08T18:00",
+  "name": "Pango Gym - Wednesday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e189",
+  "start": "2026-07-11T08:30",
+  "name": "Foundation Class",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e190",
+  "start": "2026-07-11T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e191",
+  "start": "2026-07-11T11:30",
+  "name": "Penang Crew",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e192",
+  "start": "2026-07-12T09:00",
+  "name": "Pango Gym - Sunday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e193",
+  "start": "2026-07-14T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e194",
+  "start": "2026-07-15T18:00",
+  "name": "Pango Gym - Wednesday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e195",
+  "start": "2026-07-18T08:30",
+  "name": "CANCELED Foundation Class",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e196",
+  "start": "2026-07-18T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e197",
+  "start": "2026-07-18T11:30",
+  "name": "Penang Crew",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e198",
+  "start": "2026-07-19T09:00",
+  "name": "Pango Gym - Sunday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e199",
+  "start": "2026-07-21T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e200",
+  "start": "2026-07-22T18:00",
+  "name": "Pango Gym - Wednesday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e201",
+  "start": "2026-07-25T08:30",
+  "name": "CANCELED Foundation Class",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e202",
+  "start": "2026-07-25T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e203",
+  "start": "2026-07-26T09:00",
+  "name": "Pango Gym - Sunday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e204",
+  "start": "2026-07-26T17:00",
+  "name": "Post Regatta Team Dinner",
+  "type": "Social Event",
+  "location": "Hao Phong"
+ },
+ {
+  "id": "e205",
+  "start": "2026-07-28T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e206",
+  "start": "2026-07-29T18:00",
+  "name": "Pango Gym - Wednesday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e207",
+  "start": "2026-08-01T08:30",
+  "name": "Foundation Class",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e208",
+  "start": "2026-08-01T09:30",
+  "name": "River Run",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e209",
+  "start": "2026-08-01T11:30",
+  "name": "CANCELED Penang Crew",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e210",
+  "start": "2026-08-02T09:00",
+  "name": "Pango Gym - Sunday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e211",
+  "start": "2026-08-04T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e212",
+  "start": "2026-08-05T18:00",
+  "name": "Pango Gym - Wednesday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e213",
+  "start": "2026-08-08T08:30",
+  "name": "Foundation Class",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e214",
+  "start": "2026-08-08T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e215",
+  "start": "2026-08-08T11:30",
+  "name": "CANCELED Penang Crew",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e216",
+  "start": "2026-08-09T09:00",
+  "name": "[CANCELLED] Pango Gym - Sunday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e217",
+  "start": "2026-08-11T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e218",
+  "start": "2026-08-12T18:00",
+  "name": "[CANCELLED] Pango Gym - Wednesday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e219",
+  "start": "2026-08-15T08:30",
+  "name": "CANCELED Foundation Class",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e220",
+  "start": "2026-08-15T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e221",
+  "start": "2026-08-15T11:30",
+  "name": "CANCELED Penang Crew",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e222",
+  "start": "2026-08-16T09:00",
+  "name": "[CANCELLED] Pango Gym - Sunday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e223",
+  "start": "2026-08-18T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e224",
+  "start": "2026-08-19T18:00",
+  "name": "Pango Gym - Wednesday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e225",
+  "start": "2026-08-22T08:10",
+  "name": "Foundation Class",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e226",
+  "start": "2026-08-22T09:20",
+  "name": "AGM 2026/27",
+  "type": "Meeting",
+  "location": "Docklands"
+ },
+ {
+  "id": "e227",
+  "start": "2026-08-23T09:00",
+  "name": "Pango Gym - Sunday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e228",
+  "start": "2026-08-25T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e229",
+  "start": "2026-08-26T18:00",
+  "name": "Pango Gym - Wednesday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e230",
+  "start": "2026-08-29T08:30",
+  "name": "Foundation Class",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e231",
+  "start": "2026-08-29T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e232",
+  "start": "2026-08-29T11:30",
+  "name": "Penang Crew",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e233",
+  "start": "2026-08-30T09:00",
+  "name": "Pango Gym - Sunday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e234",
+  "start": "2026-09-01T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e235",
+  "start": "2026-09-02T18:00",
+  "name": "Pango Gym - Wednesday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e236",
+  "start": "2026-09-05T08:30",
+  "name": "CANCELED Foundation Class",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e237",
+  "start": "2026-09-05T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e238",
+  "start": "2026-09-06T09:00",
+  "name": "CANCELED Pango Gym - Sunday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e239",
+  "start": "2026-09-08T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e240",
+  "start": "2026-09-09T18:00",
+  "name": "Pango Gym - Wednesday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e241",
+  "start": "2026-09-12T08:30",
+  "name": "CANCELED Foundation Class",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e242",
+  "start": "2026-09-12T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e243",
+  "start": "2026-09-12T11:30",
+  "name": "Penang Crew",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e244",
+  "start": "2026-09-13T09:00",
+  "name": "Pango Gym - Sunday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e245",
+  "start": "2026-09-15T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e246",
+  "start": "2026-09-16T18:00",
+  "name": "Pango Gym - Wednesday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e247",
+  "start": "2026-09-19T08:30",
+  "name": "Foundation Class",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e248",
+  "start": "2026-09-19T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e249",
+  "start": "2026-09-19T11:30",
+  "name": "Penang Crew",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e250",
+  "start": "2026-09-20T09:00",
+  "name": "Pango Gym - Sunday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e251",
+  "start": "2026-09-22T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e252",
+  "start": "2026-09-23T18:00",
+  "name": "Pango Gym - Wednesday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e253",
+  "start": "2026-09-26T09:00",
+  "name": "Dragon Boat Camp 1",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e254",
+  "start": "2026-09-29T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e255",
+  "start": "2026-09-30T18:00",
+  "name": "Pango Gym - Wednesday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e256",
+  "start": "2026-10-03T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e257",
+  "start": "2026-10-03T11:30",
+  "name": "Penang Crew",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e258",
+  "start": "2026-10-03T13:00",
+  "name": "🍜 Lunch Social",
+  "type": "Social Event",
+  "location": "Lim Kopi"
+ },
+ {
+  "id": "e259",
+  "start": "2026-10-04T09:00",
+  "name": "Pango Gym - Sunday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e260",
+  "start": "2026-10-06T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e261",
+  "start": "2026-10-07T18:00",
+  "name": "Pango Gym - Wednesday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e262",
+  "start": "2026-10-08T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e263",
+  "start": "2026-10-10T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e264",
+  "start": "2026-10-10T11:30",
+  "name": "Penang Crew",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e265",
+  "start": "2026-10-11T09:00",
+  "name": "Pango Gym - Sunday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e266",
+  "start": "2026-10-13T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e267",
+  "start": "2026-10-14T18:00",
+  "name": "Pango Gym - Wednesday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e268",
+  "start": "2026-10-15T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e269",
+  "start": "2026-10-17T09:00",
+  "name": "Foundation Session",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e270",
+  "start": "2026-10-17T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e271",
+  "start": "2026-10-17T11:30",
+  "name": "Penang Crew",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e272",
+  "start": "2026-10-18T09:00",
+  "name": "[CANCELLED] Pango Gym - Sunday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e273",
+  "start": "2026-10-20T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e274",
+  "start": "2026-10-21T18:00",
+  "name": "Pango Gym - Wednesday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ },
+ {
+  "id": "e275",
+  "start": "2026-10-22T18:00",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e276",
+  "start": "2026-10-24T09:00",
+  "name": "Foundation Class",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e277",
+  "start": "2026-10-24T09:30",
+  "name": "Dragon Boat Training",
+  "type": "Training",
+  "location": "Docklands"
+ },
+ {
+  "id": "e278",
+  "start": "2026-10-24T11:30",
+  "name": "Penang Crew",
+  "type": "Practice",
+  "location": "Docklands"
+ },
+ {
+  "id": "e279",
+  "start": "2026-10-25T09:00",
+  "name": "Pango Gym - Sunday",
+  "type": "Training",
+  "location": "Pango Gym Forest Hill"
+ }
+]
