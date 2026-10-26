@@ -15,10 +15,11 @@ TeamLinkt records RSVPs, not attendance. In this tool, a person "attended" an ev
 ## Scope
 
 - **Past events only.** Upcoming events are ignored. A past event's RSVPs are treated as final.
-- **Date range presets:** last 3, 6 and 12 months (default 12). No custom range.
+- **Date range:** presets for the last 3, 6 and 12 months (default 12), plus a custom From/To range. Every range falls within the last 12 months, which is what's loaded.
 - **Fully automatic grouping** of events into kinds. There's no UI for editing groups. Tuning happens in code.
 - **Two views:** by event type and by member, each with a Copy-to-Excel button and a chart over time.
-- **Out of scope:** upcoming events, custom date ranges, manual group editing, a separate count for Not Going or No Response, multi-team reports.
+- **Raw CSV export:** one row per event × member, with every RSVP status, for the selected range.
+- **Out of scope:** upcoming events, ranges older than 12 months, manual group editing, multi-team reports.
 
 ## Constraints
 
@@ -141,7 +142,7 @@ This was tuned interactively against Sea Dragons' events (see the expected resul
 CONFIG = { nameSimilarity: 0.9, slotToleranceMins: 60, minSlotEvents: 3, minGroupEvents: 3 }
 ```
 
-Grouping runs once over all events from the last 12 months. The 3- and 6-month presets filter each group's events afterwards, so group names stay the same across presets. Groups with no events in the selected range are hidden.
+Grouping runs once over all events from the last 12 months. The presets and custom range filter each group's events afterwards, so group names stay the same whatever range is selected. Groups with no events in the selected range are hidden.
 
 1. **Leave out cancelled events:** names matching `/\bcancel+ed\b/i`.
 2. **Clean each name:**
@@ -197,12 +198,34 @@ All counts use **attended = Going or Maybe**, over the events of the selected pr
 - `memberTable(groups)`: one row per member. Columns are each visible group's attended count plus Total. Members with a total of zero are sorted last.
 - `memberMonthly(member)`: attended count per calendar month across the range.
 - `toTSV(headers, rows)`: tab-separated text with a header row and `\n` line endings. Tabs and newlines inside values are replaced with spaces.
+- `rawRows(events, groups, store)`: one row per event × stored member status, ordered by date and then member name. Columns:
+  - `event_id`
+  - `date` (`YYYY-MM-DD`)
+  - `time` (`HH:MM`)
+  - `event` (the raw TeamLinkt name)
+  - `group`
+  - `location`
+  - `type`
+  - `member_id`
+  - `member`
+  - `status` (`Going`, `Maybe`, `Not Going` or `No Response`)
+- `toCSV(headers, rows)`: RFC 4180 CSV with `\r\n` line endings. A value is quoted if it contains a comma, quote, CR or LF, and quotes inside it are doubled. The file starts with a UTF-8 BOM so Excel shows emoji in event names correctly.
 
 ## UI
 
 The overlay is a modal covering about 90% of the screen, built from DOM elements as in RevSport. Clicking the bookmarklet again replaces any existing overlay.
 
-**Header:** `RSVP Stats · <team name>`, preset buttons `[3 months] [6 months] [12 months]` (12 is selected at first), `⟳ Reload` and `✕` close. Below that, tabs: **By event type** and **By member**. Clicking the backdrop also closes the overlay.
+**Header:** `RSVP Stats · <team name>`, then:
+- Preset buttons `[3 months] [6 months] [12 months]`. 12 is selected at first.
+- A custom range: two `<input type="date">` fields, **From** and **To**.
+  - They're limited to the last 12 months, up to today.
+  - Changing either one deselects the preset and applies the range straight away. If From is after To, the two are swapped.
+  - Picking a preset fills both fields with that preset's range.
+- `⬇ Export CSV`, `⟳ Reload` and `✕` close.
+
+Below that, tabs: **By event type** and **By member**. Clicking the backdrop also closes the overlay.
+
+**Export CSV** downloads `rawRows` for the selected range as `<team name> RSVPs <from> to <to>.csv`. It builds a `Blob` and clicks a temporary `<a download>` link.
 
 **Loading state:** "Loading your data… N / M events" with a progress bar. Stats render when loading finishes.
 
@@ -245,7 +268,7 @@ The overlay is a modal covering about 90% of the screen, built from DOM elements
   - availability header rows, each status class, the editable `<select>` row and a name followed by emoji.
 
   Also: a response that isn't JSON raises a session-expired error.
-- **`stats.test.js`:** leaderboard ordering and percentages, Going + Maybe counting, the member table and zero rows, monthly counts, and TSV escaping.
+- **`stats.test.js`:** leaderboard ordering and percentages, Going + Maybe counting, the member table and zero rows, monthly counts, and TSV escaping. Also: filtering by preset and custom range (inclusive of both end dates); `rawRows` columns and ordering; CSV quoting of commas, quotes and newlines; and the BOM.
 - **`store.test.js`:** save and load round trip in jsdom `localStorage`, pruning older than 13 months, the version key, and falling back to memory when `localStorage` throws.
 - **`size.test.js`:** the built `dist/bookmarklet.js`, URL-encoded with the `javascript:` prefix, is at most 30 KB. The build runs before the tests.
-- **Manual check:** run the built bookmarklet in Chrome against the live Sea Dragons team. Check the first load, a faster second load, each preset, both tabs, Copy pasted into a spreadsheet, and Reload.
+- **Manual check:** run the built bookmarklet in Chrome against the live Sea Dragons team. Check the first load, a faster second load, each preset, a custom range, both tabs, Copy pasted into a spreadsheet, the exported CSV opened in Excel (emoji intact), and Reload.
