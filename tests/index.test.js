@@ -17,10 +17,21 @@ describe('entry point', () => {
     expect(win.alert).toHaveBeenCalledWith('Open TeamLinkt and pick a team first.');
   });
 
-  test('alerts when team_id is missing', () => {
+  test('alerts when there is no team_id and no team picker', () => {
     const win = fakeWindow('app.teamlinkt.com', undefined);
     main(win);
     expect(win.alert).toHaveBeenCalledWith('Open TeamLinkt and pick a team first.');
+  });
+
+  test('reads the team from the team picker on pages without team_id (e.g. Home)', () => {
+    global.fetch = jest.fn(() => new Promise(() => {}));
+    document.body.innerHTML =
+      '<select id="layout_team_id"><option value="111">Other</option><option value="52263" selected>Sea Dragons</option></select>';
+    const win = fakeWindow('app.teamlinkt.com', undefined);
+    main(win);
+    expect(win.alert).not.toHaveBeenCalled();
+    expect(document.querySelector('#tlrsvp-overlay h2').textContent).toBe('RSVP Stats · Sea Dragons');
+    expect(global.fetch.mock.calls[0][1].body.get('team_id')).toBe('52263');
   });
 
   test('injects styles once and opens one overlay, even when run twice', () => {

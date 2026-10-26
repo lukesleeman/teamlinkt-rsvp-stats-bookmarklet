@@ -6,8 +6,16 @@ export function getTeamName(doc = document) {
   return (option && option.textContent.trim()) || 'TeamLinkt';
 }
 
+// The team switcher on every TeamLinkt page holds the selected team's id. Some pages (Roster,
+// Schedules) also set a global team_id, but others (Home) don't.
+export function getTeamId(win = window) {
+  const picker = win.document.querySelector('#layout_team_id');
+  return String((picker && picker.value) || win.team_id || '');
+}
+
 export function main(win = window) {
-  if (win.location.hostname !== 'app.teamlinkt.com' || !win.team_id) {
+  const teamId = getTeamId(win);
+  if (win.location.hostname !== 'app.teamlinkt.com' || !teamId) {
     win.alert('Open TeamLinkt and pick a team first.');
     return;
   }
@@ -15,7 +23,7 @@ export function main(win = window) {
   const existingStyle = doc.getElementById('tlrsvp-style');
   if (existingStyle) existingStyle.remove();
   doc.head.append(Object.assign(doc.createElement('style'), { id: 'tlrsvp-style', textContent: css }));
-  openOverlay({ teamId: String(win.team_id), teamName: getTeamName(doc) });
+  openOverlay({ teamId, teamName: getTeamName(doc) });
 }
 
 if (typeof jest === 'undefined') main();
