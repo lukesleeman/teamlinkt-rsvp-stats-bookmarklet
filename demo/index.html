@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TeamLinkt RSVP Stats demo</title>
+  <style>body { margin: 0; background: #eef0f4; font: 14px system-ui, sans-serif; }</style>
+</head>
+<body>
+  <!-- Demo of the overlay on made-up data, used for the README screenshots.
+       Serve the repo root (e.g. `python3 -m http.server`) and open /demo/. -->
+  <script type="module">
+    import { openOverlay } from '../src/ui/overlay.js';
+    import { fakeClub } from './fake-data.js';
+
+    const css = await (await fetch('../src/styles.css')).text();
+    document.head.append(Object.assign(document.createElement('style'), { textContent: css }));
+
+    const club = fakeClub();
+    openOverlay({
+      teamId: 'demo',
+      teamName: 'Blue River Sharks',
+      now: new Date(2026, 9, 26, 12, 0),
+      sync: async (teamId, { onProgress }) => {
+        onProgress(0, 0);
+        return { ...club, failed: 0, saveFailed: false, unreadable: {} };
+      },
+    });
+  </script>
+</body>
+</html>

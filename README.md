@@ -2,6 +2,16 @@
 
 A bookmarklet that shows who RSVPed to past [TeamLinkt](https://app.teamlinkt.com/) events, broken down by kind of event and by member.
 
+**By event type**: turnout over time and a leaderboard for each kind of session
+
+![The By event type tab: a turnout chart for Tuesday training rising over the year, and a leaderboard with an attendance strip](docs/screenshots/by-event-type.jpg)
+
+**By member**: every member's sessions per kind of session, with a monthly chart for each member
+
+![The By member tab: a searchable table of members with a monthly chart open for one of them](docs/screenshots/by-member.jpg)
+
+*Screenshots use made-up data for a fictional club.*
+
 ## Installation
 
 <!-- BOOKMARKLET_START -->
@@ -66,6 +76,12 @@ npm test
 - `npm test` - Build, then run the tests (including a check that the bookmarklet stays under 40 KB)
 
 The design is in [docs/superpowers/specs](docs/superpowers/specs), including the reference prototype of the grouping algorithm.
+
+`demo/` runs the overlay on made-up data, for screenshots or trying UI changes without TeamLinkt. Serve the repo root and open `/demo/`:
+
+```bash
+python3 -m http.server 8765
+```
 
 ## License
 
