@@ -173,7 +173,7 @@ The event type field is ignored except for the Meeting check in 7.2. It's incons
 
 ### Expected result on Sea Dragons data
 
-The test fixture is the 279 past events from 27 Oct 2025 to 25 Oct 2026, with 22 cancelled:
+The test fixture is the 279 past events from 28 Oct 2025 to 25 Oct 2026, with 22 cancelled:
 
 | Events | Group | Includes |
 |---|---|---|
@@ -198,7 +198,7 @@ All counts use **attended = Going or Maybe**, over the events of the selected pr
 - `memberTable(groups)`: one row per member. Columns are each visible group's attended count plus Total. Members with a total of zero are sorted last.
 - `memberMonthly(member)`: attended count per calendar month across the range.
 - `toTSV(headers, rows)`: tab-separated text with a header row and `\n` line endings. Tabs and newlines inside values are replaced with spaces.
-- `rawRows(events, groups, store)`: one row per event × stored member status, ordered by date and then member name. Columns:
+- `rawRows(groups, data)`: one row per event × stored member status, ordered by date and then member name. Columns:
   - `event_id`
   - `date` (`YYYY-MM-DD`)
   - `time` (`HH:MM`)
