@@ -23,7 +23,7 @@ TeamLinkt records RSVPs, not attendance. In this tool, a person "attended" an ev
 
 ## Constraints
 
-- **Bookmarklet size budget:** at most **30 KB** URL-encoded, checked by a test. Firefox caps bookmark URLs at about 64 KB, so 30 KB leaves headroom.
+- **Bookmarklet size budget:** at most **40 KB** URL-encoded, checked by a test. Firefox caps bookmark URLs at about 64 KB, so 40 KB leaves headroom. (Raised from 30 KB on 2026-10-26 for the chart labels, attendance strip and member search.)
 - **No runtime dependencies:** all code, including charts, is bundled. Nothing is loaded from a CDN.
 - **Build targets:** current Firefox, Chrome and Safari. No IE11 target, since Babel's down-compilation bloats the output.
 
@@ -270,5 +270,5 @@ Below that, tabs: **By event type** and **By member**. Clicking the backdrop als
   Also: a response that isn't JSON raises a session-expired error.
 - **`stats.test.js`:** leaderboard ordering and percentages, Going + Maybe counting, the member table and zero rows, monthly counts, and TSV escaping. Also: filtering by preset and custom range (inclusive of both end dates); `rawRows` columns and ordering; CSV quoting of commas, quotes and newlines; and the BOM.
 - **`store.test.js`:** save and load round trip in jsdom `localStorage`, pruning older than 13 months, the version key, and falling back to memory when `localStorage` throws.
-- **`size.test.js`:** the built `dist/bookmarklet.js`, URL-encoded with the `javascript:` prefix, is at most 30 KB. The build runs before the tests.
+- **`size.test.js`:** the built `dist/bookmarklet.js`, URL-encoded with the `javascript:` prefix, is at most 40 KB. The build runs before the tests.
 - **Manual check:** run the built bookmarklet in Chrome against the live Sea Dragons team. Check the first load, a faster second load, each preset, a custom range, both tabs, Copy pasted into a spreadsheet, the exported CSV opened in Excel (emoji intact), and Reload.

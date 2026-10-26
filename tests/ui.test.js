@@ -12,6 +12,16 @@ describe('lineChart', () => {
     expect(doc.getElementsByTagName('path')).toHaveLength(1);
   });
 
+  test('labels the x axis with up to 5 evenly spaced, escaped ticks', () => {
+    const texts = svg => [...new DOMParser().parseFromString(svg, 'image/svg+xml').getElementsByTagName('text')].map(t => t.textContent);
+    const nine = Array.from({ length: 9 }, (_, i) => ({ label: `p${i}`, y: i, tick: `t${i}` }));
+    expect(texts(lineChart(nine))).toEqual(expect.arrayContaining(['t0', 't2', 't4', 't6', 't8']));
+    expect(texts(lineChart(nine)).filter(t => /^t\d$/.test(t))).toHaveLength(5);
+    const two = [{ label: 'a', y: 1, tick: '<a&b>' }, { label: 'b', y: 2, tick: 'end' }];
+    expect(lineChart(two)).toContain('&lt;a&amp;b&gt;');
+    expect(texts(lineChart(two))).toEqual(expect.arrayContaining(['<a&b>', 'end']));
+  });
+
   test('returns nothing for no points', () => {
     expect(lineChart([])).toBe('');
   });

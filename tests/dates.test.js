@@ -1,5 +1,5 @@
 import {
-  isoDate, isoMinute, addMonths, monthsBetween, formatDateLabel, formatMonthLabel, presetRange,
+  isoDate, isoMinute, addMonths, monthsBetween, formatDateLabel, formatMonthLabel, formatShortDate, presetRange,
 } from '../src/dates.js';
 
 describe('date helpers', () => {
@@ -21,6 +21,7 @@ describe('date helpers', () => {
   test('formats date and month labels', () => {
     expect(formatDateLabel('2026-08-01T09:30')).toBe('Sat 1 Aug 2026');
     expect(formatMonthLabel('2026-08')).toBe('Aug 2026');
+    expect(formatShortDate('2026-10-08T18:00')).toBe('8 Oct');
   });
 
   test('presetRange counts back from today', () => {

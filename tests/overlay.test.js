@@ -78,11 +78,22 @@ describe('overlay', () => {
     expect(bodyText()).toContain('Zed <i>Kim</i>');
   });
 
+  test('leaderboard shows an attendance strip and the chart is captioned', async () => {
+    await openLoaded();
+    expect($$('.tlrsvp-body thead th').map(h => h.textContent)).toEqual(['#', 'Member', 'Sessions', '% of sessions', 'Attendance']);
+    expect($$('.tlrsvp-body tbody tr').map(r => r.lastChild.textContent)).toEqual(['●●●', '●●●']);
+    expect(bodyText()).toContain('Going + Maybe per session');
+    expect($$('.tlrsvp-chart text').map(t => t.textContent)).toEqual(expect.arrayContaining(['6 Oct', '20 Oct']));
+    click($$('button.tlrsvp-group')[1]);
+    expect($$('.tlrsvp-body tbody tr').map(r => r.lastChild.textContent)).toEqual(['●']);
+  });
+
   test('copy puts TSV on the clipboard', async () => {
     copyText.mockResolvedValue(true);
     await openLoaded();
     click($('.tlrsvp-copy'));
     expect(copyText.mock.calls[0][0].startsWith('#\tMember\tSessions\t% of sessions\n1\t')).toBe(true);
+    expect(copyText.mock.calls[0][0]).not.toContain('●');
     await flush();
     expect($('.tlrsvp-copy').textContent).toBe('Copied!');
   });
@@ -99,13 +110,32 @@ describe('overlay', () => {
     expect(firstCell()).toBe('Zed <i>Kim</i>');
   });
 
-  test('clicking a member shows their monthly chart', async () => {
+  test('clicking a member shows their captioned monthly chart', async () => {
     await openLoaded();
     click($$('button.tlrsvp-tab')[1]);
     click($('.tlrsvp-body tbody tr'));
     expect($$('tr.tlrsvp-monthly svg')).toHaveLength(1);
+    expect($('tr.tlrsvp-monthly').textContent).toContain('Zed <i>Kim</i>: sessions per month, all event types');
+    expect($$('tr.tlrsvp-monthly svg text').map(t => t.textContent)).toEqual(expect.arrayContaining(['Oct 2025', 'Oct 2026']));
     click($('.tlrsvp-body tbody tr'));
     expect($$('tr.tlrsvp-monthly')).toHaveLength(0);
+  });
+
+  test('member search filters rows and Copy copies only what is shown', async () => {
+    copyText.mockResolvedValue(true);
+    await openLoaded();
+    click($$('button.tlrsvp-tab')[1]);
+    const search = $('input.tlrsvp-search');
+    search.value = 'KIM';
+    search.dispatchEvent(new Event('input'));
+    expect($$('.tlrsvp-body tbody tr').map(r => r.firstChild.textContent)).toEqual(['Zed <i>Kim</i>']);
+    click($('.tlrsvp-copy'));
+    expect(copyText.mock.calls[0][0].split('\n')).toHaveLength(2);
+    click($$('.tlrsvp-body th')[0]);
+    expect($$('.tlrsvp-body tbody tr')).toHaveLength(1);
+    search.value = '';
+    search.dispatchEvent(new Event('input'));
+    expect($$('.tlrsvp-body tbody tr')).toHaveLength(2);
   });
 
   test('custom range with no events shows a message', async () => {

@@ -47,9 +47,9 @@ describe('stats', () => {
 
   test('leaderboard counts Going and Maybe, with percentages of loaded events', () => {
     expect(leaderboard(groupA, data)).toEqual([
-      { memberId: 'm1', name: 'Zoe', sessions: 3, pct: 100 },
-      { memberId: 'm2', name: 'Amy', sessions: 2, pct: 67 },
-      { memberId: 'm3', name: 'Bob <b>', sessions: 1, pct: 33 },
+      { memberId: 'm1', name: 'Zoe', sessions: 3, pct: 100, attendance: [true, true, true] },
+      { memberId: 'm2', name: 'Amy', sessions: 2, pct: 67, attendance: [true, false, true] },
+      { memberId: 'm3', name: 'Bob <b>', sessions: 1, pct: 33, attendance: [false, false, true] },
     ]);
   });
 

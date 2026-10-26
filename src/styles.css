@@ -16,3 +16,8 @@
 .tlrsvp-chart{max-width:800px}
 .tlrsvp-progress{width:100%}
 .tlrsvp-copybuf{position:fixed;top:0;left:0;opacity:0}
+.tlrsvp-header button,.tlrsvp-header input{height:32px;box-sizing:border-box;padding:0 10px;margin:0;border:1px solid #ccc;border-radius:4px;font:inherit;line-height:30px;vertical-align:middle}
+.tlrsvp-caption{margin:8px 0 0;color:#666;font-size:12px}
+.tlrsvp-split td:last-child{color:#2563eb;letter-spacing:1px;font-size:12px}
+.tlrsvp-tools{display:flex;gap:8px;align-items:center}
+.tlrsvp-search{height:32px;box-sizing:border-box;padding:0 8px;border:1px solid #ccc;border-radius:4px;font:inherit;width:240px}

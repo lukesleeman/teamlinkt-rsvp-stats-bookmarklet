@@ -43,8 +43,15 @@ export function leaderboard(group, data) {
   const events = loadedEvents(group, data);
   const sessions = {};
   events.forEach(e => attendees(e, data).forEach(id => { sessions[id] = (sessions[id] || 0) + 1; }));
+  // attendance: one boolean per loaded event, in date order.
   return Object.keys(sessions)
-    .map(id => ({ memberId: id, name: memberName(data, id), sessions: sessions[id], pct: Math.round(100 * sessions[id] / events.length) }))
+    .map(id => ({
+      memberId: id,
+      name: memberName(data, id),
+      sessions: sessions[id],
+      pct: Math.round(100 * sessions[id] / events.length),
+      attendance: events.map(e => attended(data.rsvps[e.id].statuses[id])),
+    }))
     .sort((a, b) => b.sessions - a.sessions || byName(a, b));
 }
 

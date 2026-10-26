@@ -1,5 +1,5 @@
 import { groupSummary, turnout, leaderboard, toTSV } from '../stats.js';
-import { formatDateLabel } from '../dates.js';
+import { formatDateLabel, formatShortDate } from '../dates.js';
 import { lineChart } from './chart.js';
 import { el, table, chart, copyButton } from './dom.js';
 
@@ -13,13 +13,17 @@ export function renderByEventType(container, { groups, data }) {
     list.querySelectorAll('.tlrsvp-active').forEach(b => b.classList.remove('tlrsvp-active'));
     button.classList.add('tlrsvp-active');
     const s = groupSummary(group, data);
-    const rows = leaderboard(group, data).map((r, i) => [i + 1, r.name, r.sessions, `${r.pct}%`]);
-    const points = turnout(group, data).map(t => ({ label: `${formatDateLabel(t.start)} · ${t.name}`, y: t.count }));
+    const board = leaderboard(group, data);
+    const rows = board.map((r, i) => [i + 1, r.name, r.sessions, `${r.pct}%`]);
+    // The strip (one dot per session, filled if attended) is on screen only; Copy keeps the numbers.
+    const shown = rows.map((r, i) => [...r, board[i].attendance.map(a => (a ? '●' : '○')).join('')]);
+    const points = turnout(group, data).map(t => ({ label: `${formatDateLabel(t.start)} · ${t.name}`, y: t.count, tick: formatShortDate(t.start) }));
     detail.replaceChildren(
       el('p', { textContent: `${s.events} events · average ${s.average} · highest ${s.highest} · lowest ${s.lowest}` }),
+      el('p', { className: 'tlrsvp-caption', textContent: 'Going + Maybe per session' }),
       chart(lineChart(points)),
       copyButton(() => toTSV(HEADERS, rows)),
-      table(HEADERS, rows),
+      table([...HEADERS, 'Attendance'], shown),
     );
   }
 

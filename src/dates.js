@@ -32,6 +32,12 @@ export function formatDateLabel(start) {
   return `${DAYS[new Date(Date.UTC(y, m - 1, d)).getUTCDay()]} ${d} ${MONTHS[m - 1]} ${y}`;
 }
 
+// '2026-10-08T18:00' -> '8 Oct'
+export function formatShortDate(start) {
+  const [, m, d] = parts(start);
+  return `${d} ${MONTHS[m - 1]}`;
+}
+
 export function formatMonthLabel(month) {
   const [y, m] = parts(month);
   return `${MONTHS[m - 1]} ${y}`;

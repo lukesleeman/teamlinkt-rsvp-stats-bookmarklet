@@ -13,12 +13,19 @@ export function renderByMember(container, { groups, data, range }) {
   function toggleMonthly(tr, row) {
     const next = tr.nextSibling;
     if (next && next.classList.contains('tlrsvp-monthly')) return next.remove();
-    const points = memberMonthly(row.memberId, groups, data, range).map(m => ({ label: formatMonthLabel(m.month), y: m.count }));
-    tr.after(el('tr', { className: 'tlrsvp-monthly' }, el('td', { colSpan: headers.length }, chart(lineChart(points)))));
+    const points = memberMonthly(row.memberId, groups, data, range)
+      .map(m => ({ label: formatMonthLabel(m.month), y: m.count, tick: formatMonthLabel(m.month) }));
+    tr.after(el('tr', { className: 'tlrsvp-monthly' }, el('td', { colSpan: headers.length },
+      el('p', { className: 'tlrsvp-caption', textContent: `${row.name}: sessions per month, all event types` }),
+      chart(lineChart(points)))));
   }
 
+  const search = el('input', { type: 'search', className: 'tlrsvp-search', placeholder: 'Search members' });
+  const visible = () => sorted.filter(r => r.name.toLowerCase().includes(search.value.trim().toLowerCase()));
+  search.oninput = () => draw();
+
   function draw() {
-    tbody.replaceChildren(...sorted.map(row => {
+    tbody.replaceChildren(...visible().map(row => {
       const tr = el('tr', {}, ...cells(row).map(c => el('td', { textContent: c })));
       tr.onclick = () => toggleMonthly(tr, row);
       return tr;
@@ -37,7 +44,7 @@ export function renderByMember(container, { groups, data, range }) {
 
   draw();
   container.replaceChildren(
-    copyButton(() => toTSV(headers, sorted.map(cells))),
+    el('div', { className: 'tlrsvp-tools' }, search, copyButton(() => toTSV(headers, visible().map(cells)))),
     el('table', { className: 'tlrsvp-table' }, el('thead', {}, headerRow), tbody),
   );
 }
