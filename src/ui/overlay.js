@@ -2,7 +2,7 @@
 import { syncTeam } from '../loader.js';
 import { clear } from '../store.js';
 import { groupEvents } from '../grouping.js';
-import { filterGroups, rawRows, RAW_HEADERS, toCSV } from '../stats.js';
+import { filterGroups, sortByTurnout, rawRows, RAW_HEADERS, toCSV } from '../stats.js';
 import { presetRange, addMonths, isoDate } from '../dates.js';
 import { downloadFile } from './copy.js';
 import { el } from './dom.js';
@@ -90,7 +90,8 @@ export function openOverlay({ teamId, teamName, sync = syncTeam, now = new Date(
     sync(teamId, { onProgress }).then(r => {
       if (run !== runs) return;
       result = r;
-      groups = groupEvents(r.events).groups;
+      // Ordered once over all loaded data, so the sidebar doesn't reshuffle between date ranges.
+      groups = sortByTurnout(groupEvents(r.events).groups, r.data);
       if (r.failed) banner(`${r.failed} events couldn't be loaded and will be retried next time.`);
       if (r.saveFailed) banner("Couldn't save data, so the next run will be slow.");
       Object.keys(r.unreadable || {}).forEach(endpoint => banner(unreadableText(endpoint)));

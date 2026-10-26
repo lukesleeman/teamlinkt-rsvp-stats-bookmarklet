@@ -1,5 +1,5 @@
 import {
-  attended, filterGroups, groupSummary, turnout, leaderboard, memberTable, memberMonthly,
+  attended, filterGroups, sortByTurnout, groupSummary, turnout, leaderboard, memberTable, memberMonthly,
   rawRows, RAW_HEADERS, toTSV, toCSV,
 } from '../src/stats.js';
 
@@ -35,6 +35,18 @@ describe('stats', () => {
     const filtered = filterGroups(groups, { from: '2026-08-08', to: '2026-09-05' });
     expect(filtered.map(g => g.label)).toEqual(['A']);
     expect(filtered[0].events.map(e => e.id)).toEqual(['a2', 'a3', 'a4']);
+  });
+
+  test('filterGroups keeps the given order apart from Other', () => {
+    const small = { label: 'Small', baseLabel: 'Small', standIns: [], events: [ev('o1', '2026-08-02')] };
+    expect(filterGroups([other, small, groupA], fullRange).map(g => g.label)).toEqual(['Small', 'A', 'Other']);
+  });
+
+  test('sortByTurnout puts the best-attended groups first and Other last', () => {
+    const crowd = { label: 'Crowd', baseLabel: 'Crowd', standIns: [], events: [ev('o1', '2026-08-02')] };
+    const bigOther = { ...other, events: groupA.events };
+    // A: 2 + 1 + 3 = 6 attended; Crowd: 1; Other has the most but always goes last.
+    expect(sortByTurnout([crowd, bigOther, groupA], data).map(g => g.label)).toEqual(['A', 'Crowd', 'Other']);
   });
 
   test('summary and turnout ignore events with no RSVPs', () => {

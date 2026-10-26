@@ -12,11 +12,14 @@ const day = ev => ev.start.slice(0, 10);
 const byName = (a, b) => a.name.localeCompare(b.name);
 const memberName = (data, id) => data.members[id] || id;
 
+const otherLast = (a, b) => (a.label === 'Other') - (b.label === 'Other');
+
+// Keeps the given group order (see sortByTurnout), with Other always last.
 export function filterGroups(groups, range) {
   return groups
     .map(g => ({ ...g, events: g.events.filter(e => day(e) >= range.from && day(e) <= range.to) }))
     .filter(g => g.events.length)
-    .sort((a, b) => (a.label === 'Other') - (b.label === 'Other') || b.events.length - a.events.length);
+    .sort(otherLast);
 }
 
 export const loadedEvents = (group, data) =>
@@ -27,6 +30,14 @@ const attendees = (ev, data) =>
 
 export const turnout = (group, data) =>
   loadedEvents(group, data).map(e => ({ start: e.start, name: e.name, count: attendees(e, data).length }));
+
+// Orders groups by total turnout (Going + Maybe summed over every loaded event), so the sessions
+// most people come to are listed first. Other always goes last.
+export function sortByTurnout(groups, data) {
+  const total = g => turnout(g, data).reduce((sum, t) => sum + t.count, 0);
+  const totals = new Map(groups.map(g => [g, total(g)]));
+  return [...groups].sort((a, b) => otherLast(a, b) || totals.get(b) - totals.get(a));
+}
 
 export function groupSummary(group, data) {
   const counts = turnout(group, data).map(t => t.count);
